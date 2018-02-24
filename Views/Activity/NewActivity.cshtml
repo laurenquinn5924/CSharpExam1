@@ -1,0 +1,33 @@
+<h1>Create an Activity!</h1>
+
+@model CSharpExam1.Models.AddActivity
+<div class="jumbotron">
+    <form asp-action="AddActivity" method=POST>
+        <label asp-for="ActivityTitle"></label>
+        <input asp-for="ActivityTitle" class="form-control">
+        <span asp-validation-for="ActivityTitle" class="text-danger"></span>
+        <br>
+
+        <label asp-for="Time"></label>
+        <input type="time" asp-for="Time" class="form-control">
+        <span asp-validation-for="Time" class="text-danger"></span>
+        <br>
+
+        <label asp-for="Date"></label>
+        <input type="date" asp-for="Date" class="form-control">
+        <span asp-validation-for="Date" class="text-danger"></span>
+        <br>
+
+        <label asp-for="Duration"></label>
+        <input asp-for="Duration" class="form-control">
+        <span asp-validation-for="Duration" class="text-danger"></span>
+        <br>
+
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control">
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <br>
+
+        <input type="submit" value="Create Activity" class="btn btn-success">
+    </form>
+</div>

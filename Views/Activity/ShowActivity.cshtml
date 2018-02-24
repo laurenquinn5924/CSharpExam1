@@ -1,0 +1,16 @@
+<div>
+
+
+    <h1>@ViewBag.ShowOne.ActivityTitle </h1>
+    <h3>Event Coordinator: @ViewBag.ShowOne.UserId</h3>
+    <h3>Description:</h3>
+    <p>@ViewBag.ShowOne.Description</p>
+    <h3>Participants</h3>
+
+    @{ 
+        foreach( var participants in @ViewBag.ShowOne.RSVPS){
+            <p>@participants.User.FirstName @participants.User.LastName</p>
+        } 
+    }
+
+</div>
